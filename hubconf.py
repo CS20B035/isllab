@@ -151,8 +151,8 @@ def testd(dataloader, model, loss_fn):
 def train(train_dataloader, test_dataloader, model1, loss_fn1, optimizer1, epochs=5):
     for t in range(epochs):
         print(f"Epoch {t+1}\n-------------------------------")
-        traind(train_dataloader, model, loss_fn, optimizer)
-        testd(test_dataloader, model, loss_fn)
+        traind(train_dataloader, model1, loss_fn, optimizer)
+        testd(test_dataloader, model1, loss_fn)
     print("Done!")
     return model1
 
