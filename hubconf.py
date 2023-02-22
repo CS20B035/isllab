@@ -169,22 +169,22 @@ def load_model(mypath="model.pth"):
 
 
 
-def sample_test1(model1, test_data):
-    model.eval()
+def sample_test1(model1, new_test_data):
+    model1.eval()
     x, y = new_test_data[0][0], new_test_data[0][1]
     with torch.no_grad():
-        pred = model(x)
+        pred = model1(x)
         predicted, actual = classes[pred[0].argmax(0)], classes[y]
         print(f'Predicted: "{predicted}", Actual: "{actual}"')
 
-def sample_test2(model1, test_data):  
-    model.eval()
+def sample_test2(model1, new_test_data):  
+    model1.eval()
     x, y = new_test_data[0][0], new_test_data[0][1]
     gy=0
     for i in range(4) :
         x, y = new_test_data[gy][0], new_test_data[gy][1]
         with torch.no_grad():
-            pred = model(x)
+            pred = model1(x)
             predicted, actual = classes[pred[0].argmax(0)], classes[y]
             print(f'Predicted: "{predicted}", Actual: "{actual}"\n')
     gy=gy+10
