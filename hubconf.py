@@ -78,6 +78,8 @@ def create_dataloaders(new_train_data, new_test_data, batch_size=64):
         print(f"X shape {X.shape}")
         print(f"y shape {y.shape}")
         break
+     
+    return train_dataloader, test_dataloader
 
 
 # model
