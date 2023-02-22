@@ -187,7 +187,7 @@ def sample_test2(model1, new_test_data):
             pred = model1(x)
             predicted, actual = classes[pred[0].argmax(0)], classes[y]
             print(f'Predicted: "{predicted}", Actual: "{actual}"\n')
-    gy=gy+10
+            gy=gy+10
 
 
 #cs20b035
