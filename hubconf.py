@@ -170,6 +170,7 @@ def load_model(mypath="model.pth"):
 
 
 def sample_test1(model1, test_data):
+    model.eval()
     x, y = new_test_data[0][0], new_test_data[0][1]
     with torch.no_grad():
         pred = model(x)
