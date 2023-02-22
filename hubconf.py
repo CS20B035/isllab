@@ -60,8 +60,8 @@ def load_data():
     
     
 
-def create_dataloaders(new_train_data, new_test_data, batchsize=64):
-
+def create_dataloaders(new_train_data, new_test_data):
+    batchsize = 64
     train_dataloader = DataLoader(new_train_data,batch_size=batchsize)
     test_dataloader = DataLoader(new_test_data,batch_size=batchsize)
 
